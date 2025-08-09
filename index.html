@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Rajat Bhatti || Quality Specialist</title>
+</head>
+
+<!-- Tailwind CDN (if you're using it) -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<header class="bg-white shadow-md fixed w-full z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      
+      <!-- Logo / Brand -->
+      <div class="flex-shrink-0">
+        <a href="#hero" class="text-2xl font-bold text-blue-600">
+          <span class="text-black">R</span>ajat <span class="text-black">B</span>hatti
+        </a>
+      </div>
+
+      <!-- Menu toggle (Mobile) -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" 
+               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" 
+                  stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav id="nav-menu" class="hidden md:flex space-x-6">
+        <a href="#hero" class="text-gray-700 hover:text-blue-600">Home</a>
+        <a href="#services" class="text-gray-700 hover:text-blue-600">Skills</a>
+        <a href="#projects" class="text-gray-700 hover:text-blue-600">Experience</a>
+        <a href="#about" class="text-gray-700 hover:text-blue-600">About</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+    <a href="#hero" class="block text-gray-700 hover:text-blue-600">Home</a>
+    <a href="#services" class="block text-gray-700 hover:text-blue-600">Skills</a>
+    <a href="#projects" class="block text-gray-700 hover:text-blue-600">Experience</a>
+    <a href="#about" class="block text-gray-700 hover:text-blue-600">About</a>
+    <a href="#contact" class="block text-gray-700 hover:text-blue-600">Contact</a>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  document.getElementById('menu-btn').addEventListener('click', function () {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+<section id="hero" class="hero">
+  <div class="hero-content" data-aos="fade-up">
+    <h1>Hi there, <span class="wave"></span></h1>
+    <h2>I'm <span class="highlight">Rajat</span></h2>
+    <p>A passionate quality specialist based in India</p>
+    <a href="#projects" class="hero-btn">Explore More</a>
+  </div>
+</section>
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f172a;
+    color: #ffffff;
+  }
+
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .highlight {
+    color: #3b82f6;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: #cbd5e1;
+  }
+
+  .hero-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #3b82f6;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+
+  .hero-btn:hover {
+    background-color: #2563eb;
+  }
+
+  .wave {
+    display: inline-block;
+    animation: wave-animation 2s infinite;
+  }
+
+  @keyframes wave-animation {
+    0%, 60%, 100% { transform: rotate(0deg); }
+    30% { transform: rotate(20deg); }
+    45% { transform: rotate(-15deg); }
+  }
+
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.2rem;
+    }
+
+    .hero-content h2 {
+      font-size: 1.8rem;
+    }
+  }
+</style>
+
+
+
+
+  <!-- Skills Section -->
+<section id="services" class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">
+        Sk<span class="text-blue-600">i</span>lls
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        A well-rounded skill set covering QA methodologies, tools, and technologies throughout the entire SDLC.
+      </p>
+    </div>
+
+    <!-- Categories -->
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- Testing Expertise -->
+      <div>
+        <h3 class="text-xl font-semibold text-gray-700 mb-4 border-l-4 pl-3 border-blue-600">Automation Tools & Frameworks</h3>
+        <ul class="grid grid-cols-2 gap-3 text-gray-600">
+          <!-- <li class="bg-white p-3 rounded-lg shadow-sm text-center">Playwright</li> -->
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Selenium Webdriver</li>
+          <!-- <li class="bg-white p-3 rounded-lg shadow-sm text-center">Appium</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">TestNg</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Maven</li> -->
+          <!-- <li class="bg-white p-3 rounded-lg shadow-sm text-center">Page Object Model</li> -->
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Rest Assured</li>
+        </ul>
+      </div>
+
+      <!-- Tools & Frameworks -->
+      <div>
+        <h3 class="text-xl font-semibold text-gray-700 mb-4 border-l-4 pl-3 border-blue-600">API Testing</h3>
+        <ul class="grid grid-cols-2 gap-3 text-gray-600">
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Postman</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Restful APIs</li>
+          <!-- <li class="bg-white p-3 rounded-lg shadow-sm text-center">SOAP APIs</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">GraphQL</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Mock Servers</li> -->
+          
+        </ul>
+      </div>
+
+      <!-- Programming & Scripting -->
+      <div>
+        <h3 class="text-xl font-semibold text-gray-700 mb-4 border-l-4 pl-3 border-blue-600">Programming Languages</h3>
+        <ul class="grid grid-cols-2 gap-3 text-gray-600">
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Java</li>
+          <!-- <li class="bg-white p-3 rounded-lg shadow-sm text-center">JavaScript</li> -->
+
+        </ul>
+      </div>
+
+      <!-- Process & Documentation -->
+      <div>
+        <h3 class="text-xl font-semibold text-gray-700 mb-4 border-l-4 pl-3 border-blue-600">Functional Testing</h3>
+        <ul class="grid grid-cols-2 gap-3 text-gray-600">
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Test Case Designing</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Test Planning</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Regression Testing</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Blackbox & Whitebox testing</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">UI/UX testing</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Localization & Globalization Testing</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">AI/ML Testing</li>
+        </ul>
+      </div>
+
+            <div>
+        <h3 class="text-xl font-semibold text-gray-700 mb-4 border-l-4 pl-3 border-blue-600">Non - Functional testing</h3>
+        <ul class="grid grid-cols-2 gap-3 text-gray-600">
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Performance testing</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Security testing</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Usability testing</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Compatibility testing</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Scalability testing</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Reliability testing</li>
+        </ul>
+      </div>
+
+         <!-- <div>
+        <h3 class="text-xl font-semibold text-gray-700 mb-4 border-l-4 pl-3 border-blue-600">CI/CD & VCS</h3>
+        <ul class="grid grid-cols-2 gap-3 text-gray-600">
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Git</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Github</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Gitlab</li>
+      
+        </ul>
+      </div> -->
+
+       <div>
+        <h3 class="text-xl font-semibold text-gray-700 mb-4 border-l-4 pl-3 border-blue-600">Project Management</h3>
+        <ul class="grid grid-cols-2 gap-3 text-gray-600">
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Agile (Scrum)</li>
+          <!-- <li class="bg-white p-3 rounded-lg shadow-sm text-center">Azure DevOps</li> -->
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Jira</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Trello</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Excel</li>
+      
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-gray-700 mb-4 border-l-4 pl-3 border-blue-600">Databases and Data Quality Assurance</h3>
+        <ul class="grid grid-cols-2 gap-3 text-gray-600">
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">SQL</li>
+          <!-- <li class="bg-white p-3 rounded-lg shadow-sm text-center">ETL Testing</li> -->
+      
+        </ul>
+      </div>
+
+
+      <div>
+        <h3 class="text-xl font-semibold text-gray-700 mb-4 border-l-4 pl-3 border-blue-600">Interpersonal Skills</h3>
+        <ul class="grid grid-cols-2 gap-3 text-gray-600">
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Strong Communication</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Leadership</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Collaboration</li>
+          <li class="bg-white p-3 rounded-lg shadow-sm text-center">Public Speaking</li>
+          
+      
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="projects" class="bg-white py-16 center">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-800">
+        Exper<span class="text-blue-600">i</span>ence
+      </h2>
+    </div>
+
+    <!-- Grid of Experience Cards -->
+    <div class="flex flex-wrap justify-center gap-10">
+      
+      <!-- Experience Item -->
+      <div class="bg-gray-50 border rounded-xl shadow-sm hover:shadow-lg transition p-6 w-full sm:w-[90%] md:w-[45%] lg:w-[30%]">
+        <img src="./img/hexaviewLogo.jpg" alt="Revclerx Logo" class="w-30 h-30 object-contain mb-4 mx-auto">
+        <h3 class="text-xl font-semibold text-gray-800">Hexaview Technologies Private Limited</h3>
+        <p class="text-sm text-gray-500 mb-2">Software Quality Engineer · july 2023 – Present</p>
+        <ul class="list-disc list-inside text-sm text-gray-600 space-y-1 mt-2">
+          <li>Executed 150+ regression test cases weekly for the Mobex Health App, maintaining 99% stability across critical modules and contributing to a 25% drop in post-production defects through functional, performance, and compliance testing.</li>
+          <li>Led a team of 4 QA Engineers as the SPOC for Adobe projects, improving team efficiency and increasing product reliability by 20% through mentorship, coordination, and clear requirement gathering.</li>
+          <li>Achieved a 95% test execution rate during sprints, focusing on high-risk areas and reducing escaped defects by 30%, while detecting 85% of critical bugs during early-stage regression testing across 40+ Agile ceremonies.</li>
+<li>Streamlined QA processes by creating functional test plans and test matrices, and conducted Globalization sign-offs to certify builds, ensuring localization compliance and a seamless global user experience.</li>
+        </ul>
+      </div>
+
+      <!-- Experience Item -->
+      <div class="bg-gray-50 border rounded-xl shadow-sm hover:shadow-lg transition p-6 w-full sm:w-[90%] md:w-[45%] lg:w-[30%]">
+        <img src="./img/deltatechLogo.webp" alt="GameMano Logo" class="w-30 h-30 object-contain mb-4 mx-auto">
+        <h3 class="text-xl font-semibold text-gray-800">Deltatech Gaming Private Limited</h3>
+        <p class="text-sm text-gray-500 mb-2">QA Engineer · Jan 2024 – Jun 2024</p>
+        <ul class="list-disc list-inside text-sm text-gray-600 space-y-1 mt-2">
+          <li>Tested 3 major gaming platforms (Poker, Rummy, Fantasy Sports) for Adda52.com, ensuring functional consistency and high-quality gameplay across all modules.
+</li>
+          <li>Executed 200+ end-to-end test scenarios across web and mobile platforms, identifying and helping resolve key usability and functionality issues pre-release.
+</li>
+          <li>Performed mobile testing on 30+ builds across iOS and Android, ensuring seamless user experience and reducing platform-specific bugs by 40%.
+
+
+</li>
+
+
+          <li>Contributed to a 20% increase in customer satisfaction by ensuring bug-free releases and conducting thorough regression, compatibility, and UI/UX testing.
+</li>
+        </ul>
+      </div>
+
+      <!-- Experience Item -->
+      <!-- <div class="bg-gray-50 border rounded-xl shadow-sm hover:shadow-lg transition p-6">
+        <img src="./img/Orange-Logo.webp" alt="Orange Logo" class="w-16 h-16 object-contain mb-4">
+        <h3 class="text-xl font-semibold text-gray-800">Orange Business</h3>
+        <p class="text-sm text-gray-500 mb-2">QA Engineer · Aug 2023 – Feb 2024</p>
+        <ul class="list-disc list-inside text-sm text-gray-600 space-y-1 mt-2">
+          <li> Wrote and maintained 150+ manual and automated test cases, increasing test coverage by 40% and improving early bug detection in both new and existing modules.</li>
+          <li> Reduced testing time by 30% by designing robust Playwright-based automation scripts, streamlining regression and E2E testing cycles.</li>
+          <li>Identified and logged 200+ bugs through detailed test planning, scenario writing, and data-driven prioritization, directly contributing to product stability and release readiness.</li>
+           <li>Collaborated within Agile/Scrum teams, helping deliver 10+ high-quality product releases by aligning testing with sprint goals, client requirements, and real-world use cases.</li>
+        </ul>
+      </div> -->
+
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="bg-gray-50 py-20">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    
+    <!-- Image Section -->
+    <div class="relative group">
+      <div class="overflow-hidden rounded-2xl shadow-lg transform transition-transform duration-500 group-hover:scale-105">
+        <img src="./img/aboutRajat.jpg" alt="About Nikhil" class="w-full object-cover">
+      </div>
+    </div>
+    
+    <!-- Content Section -->
+    <div>
+      <h2 class="text-4xl font-bold mb-4 text-gray-800">About <span class="text-blue-600">Me</span></h2>
+      <h3 class="text-xl text-blue-700 font-semibold mb-4">QA Consultant</h3>
+      <p class="text-gray-700 leading-relaxed mb-6">
+      <p>
+  <p>
+  I’m a <strong>QA Engineer</strong> with hands-on experience in both <strong>manual and automation testing</strong> using tools like <strong>Selenium and Rest Assured</strong>. I’ve tested across web, iOS, and Android platforms with a focus on stability, usability, and performance.
+</p>
+<p class="mt-2">
+  At <strong>Hexaview</strong>, I executed 150+ regression cases weekly, led a 4-member QA team, and reduced post-production defects by 25%. At <strong>Deltatech Gaming</strong>, I tested Poker, Rummy, and Fantasy platforms on Adda52.com, improving bug detection and mobile experience.
+</p>
+<!-- <p class="mt-2">
+  I enjoy catching bugs early, improving product quality, and ensuring users get a smooth, issue-free experience.
+</p> -->
+
+      <a href="Rajat-resume.pdf" target="_blank" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition-all duration-300">Download Resume</a>
+    </div>
+
+  </div>
+</section>
+<!-- Contact Section -->
+<section id="contact" style="padding: 80px 20px; background: #f9fbfc; font-family: 'Segoe UI', sans-serif;">
+  <div style="max-width: 1100px; margin: auto; text-align: center;">
+    <h1 style="font-size: 36px; color: #0d6efd; margin-bottom: 40px;">Get in Touch</h1>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px;">
+
+      <!-- Phone -->
+      <div style="background: white; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); padding: 30px;">
+        <div style="margin-bottom: 15px;">
+          <div style="width: 60px; height: 60px; background: #e7f0fe; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+            <img src="https://img.icons8.com/ios-filled/50/007bff/phone.png" alt="Phone Icon" style="width: 28px;" />
+          </div>
+        </div>
+        <h3 style="margin: 15px 0 10px;">Phone</h3>
+        <p style="margin: 5px 0;">+91 90503 58180</p>
+        <!-- <p style="margin: 5px 0;">+91 93521 29437</p> -->
+      </div>
+
+      <!-- Email -->
+      <div style="background: white; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); padding: 30px;">
+        <div style="margin-bottom: 15px;">
+          <div style="width: 60px; height: 60px; background: #e7f0fe; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+            <img src="https://img.icons8.com/ios-filled/50/007bff/message-squared.png" alt="Email Icon" style="width: 28px;" />
+          </div>
+        </div>
+        <h3 style="margin: 15px 0 10px;">Email</h3>
+        <p>
+          <a href="mailto:rajatbhatti51@gmail.com" style="color: #333; text-decoration: none;">rajatbhatti51@gmail.com</a>
+        </p>
+      </div>
+
+      <!-- Address -->
+      <div style="background: white; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); padding: 30px;">
+        <div style="margin-bottom: 15px;">
+          <div style="width: 60px; height: 60px; background: #e7f0fe; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+            <img src="https://img.icons8.com/ios-filled/50/007bff/marker.png" alt="Address Icon" style="width: 28px;" />
+          </div>
+        </div>
+        <h3 style="margin: 15px 0 10px;">Address</h3>
+        <p style="margin: 5px 0;">Noida, India</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End Contact Section -->
+
+
+ <!-- Footer -->
+<section id="footer" style="background-color: #1e1e2f; color: #fff; font-family: 'Segoe UI', sans-serif; padding: 50px 20px;">
+  <div class="footer-container" style="max-width: 1100px; margin: auto; text-align: center;">
+
+    <!-- Brand Name -->
+    <div class="footer-brand" style="margin-bottom: 20px;">
+      <h1 style="font-size: 2.2rem; font-weight: bold;">
+        <span style="color: #007BFF;">R</span>ajat <span style="color: #007BFF;">B</span>hatti
+      </h1>
+      <h3 style="font-size: 1.2rem; font-weight: normal; color: #ccc;">Quality Specialist</h3>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="footer-social" style="margin: 25px 0;">
+      <a href="https://www.linkedin.com/in/rajat-bhatti/" target="_blank" style="display: inline-block; margin: 0 10px;">
+        <img src="https://img.icons8.com/bubbles/100/000000/linkedin.png" alt="LinkedIn" style="width: 40px; height: 40px;" />
+      </a>
+    </div>
+
+    <!-- Footer Text -->
+    <div class="footer-bottom" style="font-size: 0.95rem; color: #aaa;">
+      <p>&copy; 2025 <strong>Rajat Bhatti</strong>. All rights reserved.</p>
+    </div>
+
+  </div>
+</section>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
